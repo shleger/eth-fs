@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/shleger/eth-fs/tree/master.svg?style=svg)](https://app.circleci.com/pipelines/github/shleger/eth-fs)
 
 
-## Implementation of Financial Servies on Ethereum / Polygon
+## Implementation of Financial Services on Ethereum / Polygon
 
 ### Bonds
 ### Options

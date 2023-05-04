@@ -5,7 +5,7 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
 
 
 
-const contract = require("../artifacts/contracts/ArbitraryNft.sol/ArbitraryNft.json");
+const contract = require("../artifacts/contracts/Bond.sol/Bond.json");
 console.log(JSON.stringify(contract.abi));
 
 const provider = new ethers.providers.EtherscanProvider("sepolia", ETHERSCAN_API_KEY);

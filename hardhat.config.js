@@ -19,8 +19,8 @@ module.exports = {
       accounts: [process.env.SEPOLIA_MY_METAMASK_PRIVATE_KEY]
     },
     polygon_mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com",
-      accounts: [process.env.MUMBAYI_PRIVATE_KEY]
+      url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.MUMBAI_API_KEY}`,
+      accounts: [process.env.MUMBAI_MY_METAMASK_PRIVATE_KEY]
       }    
   },
   etherscan: {

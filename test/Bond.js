@@ -53,7 +53,7 @@ describe("Bond contract ", function () {
     expect("BND").to.equal(symbol);
 
     const totalSupply = await contract.totalSupply();
-    expect(1000).to.equal(totalSupply);
+    expect(BigInt("1000000000000000000000")).to.equal(totalSupply); // 1000 * 10^18
 
     const props = await contract.getProps()
     expect("GamesPTE").to.equal(props.issuer);
@@ -77,6 +77,8 @@ describe("Bond contract ", function () {
   it("Should sell bond in primary market ", async () => {
     //TODO
     const { contract } = await loadFixture(deployFixture);
+
+
   }).timeout(10000);
 
   it("Should sell bond with higher  price ", async () => {

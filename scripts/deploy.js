@@ -5,13 +5,22 @@ async function main() {
   
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
-    const tokenName = "ArbitraryNft"
-    const tokenSymbol = "ARB"
-    const ipfsBaseUri = "ipfs://just_mock_resource/" 
-
+    const tokenName = "Bond"
+    const tokenSymbol = "BNB"
       
-    const Contract = await ethers.getContractFactory("ArbitraryNft");
-    const contract = await Contract.deploy(tokenName, tokenSymbol, ipfsBaseUri);
+    const Bond = await ethers.getContractFactory("Bond");
+    const bondProps = {
+      "issuer": "GamesPTE",
+      "dateMaturity": 1,
+      "dateCreated": 2,
+      "coupone": 3,
+      "couponePreiod": 4,
+      "faceValue": 5,
+      "bondPrice": 6,
+      "bondYeld": 7
+    }
+
+    const contract = await Bond.deploy(tokenName, tokenSymbol, bondProps, 1000);
   
     console.log("Token address:", contract.address);
   }

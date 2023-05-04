@@ -33,8 +33,8 @@ contract Bond is ERC20, Ownable {
         string memory _tokenSymbol,
         Props memory _props,
         uint256 initialSupply
-    ) ERC20(_tokenName, _tokenSymbol) {
-        _mint(msg.sender, initialSupply);
+    ) ERC20(_tokenName, _tokenSymbol) {        
+        _mint(msg.sender, initialSupply * 10**uint(decimals())); //ERC20 tokens have 18 decimals 
         props = _props;
     }
 
